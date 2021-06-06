@@ -2,12 +2,15 @@
 # SXHKD
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# Polybar
+$HOME/.config/polybar/forest/launch.sh
+
 # Picom 
 picom --experimental-backends 
 
-bspc monitor DP-2 -d IV V VI 
-bspc monitor HDMI-0 -d I II III 
-bspc monitor DP-1 -d VII VIII IX
+bspc monitor DP-2 -d 4 5 6 
+bspc monitor HDMI-0 -d 1 2 3 
+bspc monitor DP-1 -d 7 8 9 
 
 bspc config border_width         0
 bspc config window_gap          12
@@ -24,5 +27,3 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-# Polybar
-$HOME/.config/polybar/forest/launch.sh

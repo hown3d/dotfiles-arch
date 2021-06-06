@@ -1,3 +1,4 @@
+#! /bin/sh
 #
 # wm independent hotkeys
 #
@@ -10,7 +11,7 @@ super + Return
 super + @space
 	$HOME/.config/rofi/launchers/misc/launcher.sh	
 # window switcher
-super + alt + tab
+super + alt + Tab
 	rofi -show window
 # make sxhkd reload its configuration files:
 super + Escape
@@ -18,6 +19,10 @@ super + Escape
 # firefox
 super + b
 	firefox &
+
+# Rofi Codium Integration
+super + {_, alt+} c
+	{codium, rofi-code} 
 
 #
 # bspwm hotkeys
@@ -79,7 +84,6 @@ super + {left,right}
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-
 # focus the older or newer node in the foc
 super + {o,i}
 	bspc wm -h off; \
@@ -87,11 +91,12 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-#super + {_,shift + }{1-9,0}
-#	bspc {desktop -f,node -d	} '^{1-9,10}'
+super + {_,shift +}{1-9,0}
+	bspc {desktop -f, node -d} "^{1-9,10}"
 
-super + {_,shift + } {1,2,3} ; {1-9,0}
-	bspc {desktop -f, node -d} "^{1,2,3}:^{1-9,10}"
+#super + {_,shift + } {1,2,3} ; {1-9,0}
+#	bspc {desktop -f, node -d} "^{1,2,3}:^{1-9,10}" 
+
 #
 # preselect
 #

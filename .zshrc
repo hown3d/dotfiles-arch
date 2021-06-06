@@ -88,7 +88,6 @@ plugins=(
   	archlinux
   	history-substring-search
   	poetry
-	kubectl
 )
 
 
@@ -100,11 +99,7 @@ plugins=(
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -125,7 +120,9 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lla="ls -alh"
+#Kubernetes
 alias k="kubectl"
+source <(kubectl completion zsh)
 
 #logo ls
 alias ls="logo-ls"
