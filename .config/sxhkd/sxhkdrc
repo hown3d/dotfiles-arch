@@ -8,7 +8,7 @@ super + Return
 	st
 
 # program launcher
-super + @space
+super + space
 	$HOME/.config/rofi/launchers/misc/launcher.sh	
 # window switcher
 super + alt + Tab
