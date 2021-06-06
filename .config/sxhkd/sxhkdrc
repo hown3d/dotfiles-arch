@@ -24,6 +24,10 @@ super + b
 super + {_, alt+} c
 	{codium, rofi-code} 
 
+# sxhkd Rofi Helper
+super + alt + h
+	sxhkd-help	
+
 #
 # bspwm hotkeys
 #
@@ -51,7 +55,7 @@ super + g
 #
 # state/flags
 #
-z
+
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,~floating,fullscreen}

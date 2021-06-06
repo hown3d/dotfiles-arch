@@ -124,23 +124,15 @@ alias ls="logo-ls"
 # pretty ls
 source ptSh_set_aliases
 
-# vscodium alias
-alias code="vscodium"
-
-
 source /usr/share/zsh/.minikube-completion
 source /usr/share/zsh/plugins/skaffold/completion
-#source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#History Substring Search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Dotbare
+source /usr/share/zsh/plugins/dotbare/dotbare.plugin.zsh
+export DOTBARE_DIR="$HOME/.cfg"
+export DOTBARE_TREE="$HOME"
 
 # Kubecontext
 KUBE_PS1_SYMBOL_USE_IMG=true
@@ -157,4 +149,4 @@ export SDKMAN_DIR="/home/ludi/.sdkman"
 [[ -s "/home/ludi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ludi/.sdkman/bin/sdkman-init.sh"
 
 export TERMINAL=st
-alias config='/usr/bin/git --git-dir=/home/ludi/.cfg/ --work-tree=/home/ludi'
+#alias config='/usr/bin/git --git-dir=/home/ludi/.cfg/ --work-tree=/home/ludi'
