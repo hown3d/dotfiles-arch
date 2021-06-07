@@ -134,6 +134,9 @@ source /usr/share/zsh/plugins/dotbare/dotbare.plugin.zsh
 export DOTBARE_DIR="$HOME/.cfg"
 export DOTBARE_TREE="$HOME"
 
+# Forgit
+source <(curl -sSL git.io/forgit)
+
 # Kubecontext
 KUBE_PS1_SYMBOL_USE_IMG=true
 source '/opt/kube-ps1/kube-ps1.sh'
