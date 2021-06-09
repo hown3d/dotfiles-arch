@@ -142,11 +142,6 @@ KUBE_PS1_SYMBOL_USE_IMG=true
 source '/opt/kube-ps1/kube-ps1.sh'
 PROMPT='$(kube_ps1)'$PROMPT
 
-
-#pyenv
-eval "$(pyenv init -)"
-
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ludi/.sdkman"
 [[ -s "/home/ludi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ludi/.sdkman/bin/sdkman-init.sh"
