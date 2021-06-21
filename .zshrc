@@ -43,11 +43,16 @@ lazyload podman -- 'source <(podman completion zsh)'
 lazyload gh -- 'source <(gh completion -s zsh)'
 
 # aliases
+# ls
 alias ll="ls -alh"
 alias l="ls -lh"
 # logo ls
 alias ls="logo-ls"
-
+# git
+alias gc="git commit -av"
+alias gPr="git pull --rebase"
+alias gP="git pull"
+alias gp="git push"
 
 # pretty ls
 source ptSh_set_aliases

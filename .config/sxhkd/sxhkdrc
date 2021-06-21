@@ -26,7 +26,11 @@ super + alt+ c
 
 # sxhkd Rofi Helper
 super + alt + h
-	sxhkd-help	
+	$HOME/.config/sxhkd/sxhkd-help
+
+# Alias Rofi Helper
+super + alt + a
+	$HOME/.config/rofi/alias-help
 
 #
 # bspwm hotkeys

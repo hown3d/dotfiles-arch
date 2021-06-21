@@ -1,0 +1,3 @@
+#!/bin/bash
+awk -F '=' '/alias/ {print $1, "\t", $2}' $HOME/.zshrc | column -t -s $'\t' | rofi -dmenu -i -markup-rows -no-show-icons -width 1000 -lines 15 -yoffset 40
+
