@@ -25,12 +25,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'mhinz/vim-startify'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'fatih/vim-go'
+Plugin 'neoclide/coc.nvim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 
+colorscheme default
 
 
 "filetype plugin on
@@ -45,6 +51,16 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " Enable syntax highlighting
 syntax on
+
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+" Auto formatting and importing
+let g:go_fmt_autosave = 1
 
 set nocompatible
 
@@ -84,7 +100,6 @@ set wildmenu
 
 " Show partial commands in the last line of the screen
 set showcmd
-
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
@@ -147,6 +162,7 @@ set cmdheight=2
 
 " Display line numbers on the left
 set number
+set relativenumber
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -154,3 +170,17 @@ set notimeout ttimeout ttimeoutlen=200
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
 
+" UTF-8 Encoding
+set encoding=utf-8
+
+"Coc
+source $HOME/.vim/coc.vim
+
+" Leader key 
+let g:mapleader=","
+
+" Keybindings
+nmap <leader><tab> :Files<CR> 
+
+nnoremap <C-A> :tabprevious<CR>
+nnoremap <C-D> :tabnext<CR>

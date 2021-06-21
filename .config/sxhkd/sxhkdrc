@@ -21,8 +21,8 @@ super + b
 	firefox &
 
 # Rofi Codium Integration
-super + {_, alt+} c
-	{codium, rofi-code} 
+super + alt+ c
+	rofi-code 
 
 # sxhkd Rofi Helper
 super + alt + h
@@ -81,7 +81,7 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + {left,right}
+super + {a,d}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -96,7 +96,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift +}{1-9,0}
-	bspc {desktop -f, node -d} "^{1-9,10}"
+	bspc {desktop -f, node -d} "^{1-9,10}" --follow
 
 #super + {_,shift + } {1,2,3} ; {1-9,0}
 #	bspc {desktop -f, node -d} "^{1,2,3}:^{1-9,10}" 
