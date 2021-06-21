@@ -43,6 +43,8 @@ lazyload podman -- 'source <(podman completion zsh)'
 lazyload gh -- 'source <(gh completion -s zsh)'
 
 # aliases
+# kubectl
+alias k="kubectl"
 # ls
 alias ll="ls -alh"
 alias l="ls -lh"
