@@ -16,6 +16,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 #    MONITOR=$m polybar -q main -c "$DIR"/config.ini &
 #  done
 #else
-  polybar -q main -c "$DIR"/config.ini &
+  polybar main -c "$DIR"/config.ini &
 #fi
 

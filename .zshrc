@@ -41,6 +41,7 @@ zplug load
 lazyload kubectl -- 'source <(kubectl completion zsh)'
 lazyload podman -- 'source <(podman completion zsh)'
 lazyload gh -- 'source <(gh completion -s zsh)'
+lazyload grype -- 'source <(grype completion zsh)'
 
 # aliases
 # kubectl
@@ -55,6 +56,11 @@ alias gc="git commit -av"
 alias gPr="git pull --rebase"
 alias gP="git pull"
 alias gp="git push"
+# dotbare
+alias dgc="dotbare commit -av"
+alias dga="dotbare fadd"
+alias dedit="dotbare fedit"
+alias dgp="dotbare push"
 
 # pretty ls
 source ptSh_set_aliases

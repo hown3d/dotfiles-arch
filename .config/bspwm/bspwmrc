@@ -1,16 +1,4 @@
 #! /bin/bash 
-# SXHKD
-pgrep -x sxhkd > /dev/null || sxhkd &
-
-# Picom 
-picom --experimental-backends 
-
-# Random picture with feh
-feh --bg-fill ~/Bilder/wallpapers/bg_17.jpg
-# Polybar
-$HOME/.config/polybar/forest/launch.sh
-
-
 bspc monitor DP-2 -d 4 5 6 
 bspc monitor HDMI-0 -d 1 2 3 
 bspc monitor DP-1 -d 7 8 9 
@@ -22,7 +10,7 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc config top_padding 0
+bspc config -m DP-2 top_padding 34
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop='^II'
@@ -30,3 +18,14 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+# SXHKD
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Polybar
+$HOME/.config/polybar/forest/launch.sh &
+
+# Picom 
+picom --experimental-backends 
+
+# Random picture with feh
+feh --bg-fill ~/Bilder/wallpapers/bg_17.jpg
