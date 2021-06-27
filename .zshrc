@@ -7,7 +7,7 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-export EDITOR=$(which vim)
+export EDITOR=$(which nvim)
 
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
