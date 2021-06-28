@@ -173,6 +173,16 @@ return packer.startup(
                 require("misc-utils").blankline()
             end
         }
+
+        use {
+          "f-person/git-blame.nvim"
+        }
+        use {
+          "andrewstuart/vim-kubernetes",
+          requires = {
+            {"SirVer/ultisnips"},
+          }
+        }
     end,
     {
         display = {

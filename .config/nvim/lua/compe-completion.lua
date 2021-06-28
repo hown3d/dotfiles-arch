@@ -17,8 +17,11 @@ M.config = function()
         source = {
             buffer = {kind = "﬘", true},
             luasnip = {kind = "﬌", true},
-            nvim_lsp = true,
+            nvim_lsp = {
+              enable = true
+            },
             nvim_lua = true,
+            ultisnips = true;
         }
     }
 end

@@ -47,7 +47,21 @@ M.config = function()
         local servers = require "lspinstall".installed_servers()
 
         for _, lang in pairs(servers) do
-            if lang ~= "lua" then
+            if lang == "yaml" then 
+                lspconf[lang].setup {
+                    on_attach = on_attach,
+                    root_dir = vim.loop.cwd,
+                    autostart = true,
+                    settings = {
+                        yaml = {
+                            schemas = {
+                                kubernetes = "/*.yaml"
+                      }
+                    }
+                  }
+              }
+             
+            elseif lang ~= "lua" and lang ~= "yaml" then
                 lspconf[lang].setup {
                     on_attach = on_attach,
                     root_dir = vim.loop.cwd
