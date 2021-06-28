@@ -9,7 +9,7 @@ super + Return
 
 # program launcher
 super + space
-	$HOME/.config/rofi/launchers/misc/launcher.sh	
+	$HOME/.config/rofi/misc/launcher.sh
 # window switcher
 super + alt + Tab
 	rofi -show window
