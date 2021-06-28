@@ -124,13 +124,13 @@ return packer.startup(
 
         use {
             "glepnir/dashboard-nvim",
-            cmd = {
-                "Dashboard",
-                "DashboardNewFile",
-                "DashboardJumpMarks",
-                "SessionLoad",
-                "SessionSave"
-            },
+            -- cmd = {
+            --     "Dashboard",
+            --     "DashboardNewFile",
+            --     "DashboardJumpMarks",
+            --     "SessionLoad",
+            --     "SessionSave"
+            -- },
             setup = function()
                 require("dashboard").config()
             end
