@@ -11,6 +11,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc config -m DP-2 top_padding 34
+bspc config -m DP-1 top_padding 0
+bspc config -m HDMI-0 top_padding 0
+
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Firefox desktop='^II'
@@ -18,6 +21,9 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a polybar sticky=on
+
+# xfcesettings
+xfsettingsd &
 
 # SXHKD
 pgrep -x sxhkd > /dev/null || sxhkd &

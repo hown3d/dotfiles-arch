@@ -32,6 +32,9 @@ super + alt + h
 super + alt + a
 	$HOME/.config/rofi/alias-help
 
+# Powermenu
+super + shift + e
+        $HOME/.config/rofi/powermenu/powermenu.sh
 #
 # bspwm hotkeys
 #

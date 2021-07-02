@@ -178,6 +178,9 @@ return packer.startup(
           "f-person/git-blame.nvim"
         }
         use {
+          "fatih/vim-go"
+        }
+        use {
           "andrewstuart/vim-kubernetes",
           requires = {
             {"SirVer/ultisnips"},
