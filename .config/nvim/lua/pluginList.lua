@@ -186,6 +186,9 @@ return packer.startup(
             {"SirVer/ultisnips"},
           }
         }
+        use {
+          "ray-x/lsp_signature.nvim",
+        }
     end,
     {
         display = {

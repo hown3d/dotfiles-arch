@@ -2,6 +2,14 @@ local M = {}
 
 M.config = function()
     function on_attach(client, bufnr)
+        -- add lsp_signature to lsp
+        require "lsp_signature".on_attach({
+          bind = true, -- This is mandatory, otherwise border config won't get registered.
+          handler_opts = {
+          border = "single"
+        }
+    })
+
         local function buf_set_keymap(...)
             vim.api.nvim_buf_set_keymap(bufnr, ...)
         end
