@@ -17,6 +17,8 @@ map("v", "x", [=[ "_x ]=], opt)
 
  this line too ]]
 --
+-- Local replacement
+map("n", "<leader>gr",":%s/<C-r><C-w>//g<Left><Left>", {silent = false})
 
 -- OPEN TERMINALS --
 map("n", "<C-l>", [[<Cmd>vnew term://zsh <CR>]], opt) -- term over right

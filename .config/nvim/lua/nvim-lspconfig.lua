@@ -1,6 +1,22 @@
 local M = {}
 
 M.config = function()
+  -- SQL LSP Server
+-- 1. get the default config from nvim-lspconfig
+    --local config = require"lspinstall/util".extract_config("sqlls")
+-- 2. update the cmd. relative paths are allowed, lspinstall automatically adjusts the cmd and cmd_cwd for us!
+    --config.default_config.cmd[1] = "./node_modules/.bin/sql-language-server"
+
+-- 3. extend the config with an install_script and (optionally) uninstall_script
+    --require'lspinstall/servers'.sqlls = vim.tbl_extend('error', config, {
+-- lspinstall will automatically create/delete the install directory for every server
+     -- install_script = [[
+     -- ! test -f package.json && npm init -y --scope=lspinstall || true
+     -- npm install sql-language-server 
+     -- ]],
+     -- uninstall_script = nil -- can be omitted
+    --})
+
     function on_attach(client, bufnr)
         -- add lsp_signature to lsp
         require "lsp_signature".on_attach({
@@ -53,6 +69,7 @@ M.config = function()
 
         local lspconf = require("lspconfig")
         local servers = require "lspinstall".installed_servers()
+        table.insert(servers, "sqlls")
 
         for _, lang in pairs(servers) do
             if lang == "yaml" then 
@@ -97,6 +114,7 @@ M.config = function()
             end
         end
     end
+
 
     setup_servers()
 
