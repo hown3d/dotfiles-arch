@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 ## Author  : Aditya Shakya
 ## Mail    : adi1090x@gmail.com
 ## Github  : @adi1090x
@@ -52,7 +53,7 @@ confirm_exit() {
 
 # Message
 msg() {
-	rofi -theme "$dir/message.rasi" -e "Available Options  -  yes / y / no / n"
+	rofi -theme "$dir/confirm.rasi" -e "Available Options  -  yes / y / no / n"
 }
 
 # Variable passed to rofi

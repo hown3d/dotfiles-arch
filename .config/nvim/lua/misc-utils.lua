@@ -2,7 +2,7 @@ local opt = vim.opt
 
 opt.ruler = false
 opt.hidden = true
-opt.ignorecase = true
+opt.ignorecase = false 
 opt.splitbelow = true
 opt.splitright = true
 opt.termguicolors = true
@@ -17,6 +17,7 @@ opt.clipboard = "unnamedplus"
 opt.number = true
 opt.numberwidth = 2
 -- opt("w", "relativenumber", true)
+opt.relativenumber = true
 
 -- for indenline
 opt.expandtab = true

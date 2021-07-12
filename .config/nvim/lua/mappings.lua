@@ -18,12 +18,15 @@ map("v", "x", [=[ "_x ]=], opt)
  this line too ]]
 --
 -- Local replacement
-map("n", "<leader>gr",":%s/<C-r><C-w>//g<Left><Left>", {silent = false})
+map("n", "<leader>gr","#:%s///g<Left><Left>", {silent = false})
 
 -- OPEN TERMINALS --
 map("n", "<C-l>", [[<Cmd>vnew term://zsh <CR>]], opt) -- term over right
 map("n", "<C-x>", [[<Cmd> split term://zsh | resize 10 <CR>]], opt) --  term bottom
 map("n", "<C-t>t", [[<Cmd> tabnew | term <CR>]], opt) -- term newtab
+
+-- clear highlighting
+map("n", "<leader>c", ":nohlsearch<CR>")
 
 -- copy whole file content
 map("n", "<C-a>", [[ <Cmd> %y+<CR>]], opt)
@@ -38,7 +41,7 @@ map("n", "<leader>m", ":TZMinimalist<CR>", opt)
 map("n", "<C-s>", ":w <CR>", opt)
 -- vim.cmd("inoremap jh <Esc>")
 
--- Commenter Keybinding
+--Commenter Keybinding
 map("n", "<leader>/", ":CommentToggle<CR>", opt)
 map("v", "<leader>/", ":CommentToggle<CR>", opt)
 
