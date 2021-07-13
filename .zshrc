@@ -66,3 +66,7 @@ alias dgp="dotbare push"
 source ptSh_set_aliases
 
  eval "$(starship init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

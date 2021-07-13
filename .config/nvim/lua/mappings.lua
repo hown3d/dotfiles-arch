@@ -20,10 +20,21 @@ map("v", "x", [=[ "_x ]=], opt)
 -- Local replacement
 map("n", "<leader>gr","#:%s///g<Left><Left>", {silent = false})
 
+-- Neogit 
+map("n", "<leader>gu", "[[ <Cmd>Neogit <CR>]]", opt)
+map("n", "<leader>ga", "[[ <Cmd>Neogit stash<CR>]]", opt)
+map("n", "<leader>gP", "[[ <Cmd>Neogit pull <CR>]]", opt)
+map("n", "<leader>gp", "[[ <Cmd>Neogit push <CR>]]", opt)
+map("n", "<leader>gc", "[[ <Cmd>Neogit commit <CR>]]", opt)
+
+
 -- OPEN TERMINALS --
 map("n", "<C-l>", [[<Cmd>vnew term://zsh <CR>]], opt) -- term over right
 map("n", "<C-x>", [[<Cmd> split term://zsh | resize 10 <CR>]], opt) --  term bottom
 map("n", "<C-t>t", [[<Cmd> tabnew | term <CR>]], opt) -- term newtab
+
+-- Exit Terminal Mode with Escape
+map("t", "<Esc>", "<C-\\><C-n>", opt)
 
 -- clear highlighting
 map("n", "<leader>c", ":nohlsearch<CR>")

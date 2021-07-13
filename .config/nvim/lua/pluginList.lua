@@ -175,9 +175,6 @@ return packer.startup(
         }
 
         use {
-          "f-person/git-blame.nvim"
-        }
-        use {
           "fatih/vim-go"
         }
         use {
@@ -189,6 +186,25 @@ return packer.startup(
         use {
           "ray-x/lsp_signature.nvim",
         }
+        use {
+          "nanotee/zoxide.vim"
+        }
+        use {
+          'pwntester/octo.nvim',
+          config=function()
+            require"octo-config".config()
+          end
+        }
+        use { 
+          'TimUntersberger/neogit',
+          requires = {
+            'nvim-lua/plenary.nvim',
+            'sindrets/diffview.nvim'
+          },
+          config=function()
+            require"neogit-config".config()
+          end
+      }
     end,
     {
         display = {
