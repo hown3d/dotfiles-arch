@@ -50,7 +50,7 @@ alias k="kubectl"
 alias ll="ls -alh"
 alias l="ls -lh"
 # logo ls
-alias ls="logo-ls"
+#alias ls="logo-ls"
 # git
 alias gc="git commit -av"
 alias gPr="git pull --rebase"
@@ -63,7 +63,7 @@ alias dedit="dotbare fedit"
 alias dgp="dotbare push"
 
 # pretty ls
-source ptSh_set_aliases
+#source ptSh_set_aliases
 
  eval "$(starship init zsh)"
 
