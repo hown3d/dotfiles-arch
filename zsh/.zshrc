@@ -41,7 +41,6 @@ zplug load
 lazyload kubectl -- 'source <(kubectl completion zsh)'
 lazyload podman -- 'source <(podman completion zsh)'
 lazyload gh -- 'source <(gh completion -s zsh)'
-lazyload grype -- 'source <(grype completion zsh)'
 
 # aliases
 # kubectl
@@ -70,3 +69,6 @@ alias dgp="dotbare push"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/bin/aws_completer' aws
