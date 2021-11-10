@@ -15,10 +15,9 @@
 ;   The README contains a lot of information
 ;
 ;==========================================================
-
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #24283b
+background = #26233A
 background-alt = #bf1e1e1e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -29,15 +28,19 @@ alert = #bd2c40
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
+#bottom = true
 width = 100%
 height = 25
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0 
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
+
+border-bottom-size = 5
+border-top-size = 0
 
 line-size = 2
 line-color = #00564d
@@ -59,13 +62,16 @@ font-3 = "siji:style=Regular:pixelsize=24;2"
 font-1 = Font Awesome 5 Free:pixelsize=12;2
 font-5 = Font Awesome 5 Free Solid:pixelsize=12;2
 font-6 = Font Awesome 5 Brands:pixelsize=12;2
+#font-7 = Iosevka Nerd Font:style=Regular:pixelsize=12,2
+#font-8 = "Terminus:size=10;3"
+#font-9 = "waffle:size=10;3"
 #font-3= "MaterialIcons:style:Regular:pixelsize=12;2"
 #font-7 = Material Design Iconic Font:style=Design-Iconic-Font:pixelsize=12;2
-modules-left = bspwm i3 xwindow
-modules-center = 
+modules-left = bspwm
+modules-center =  
 modules-right = pulseaudio memory xkeyboard pacman-updates date powermenu
 
-separator = 
+separator =
 tray-position = none
 tray-padding = 2
 ;tray-background = #0063ff
@@ -82,7 +88,7 @@ wm-restack = bspwm
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
-eursor-scroll = ns-resize
+cursor-scroll = ns-resize
 
 [module/pacman-updates]
 type = custom/script
@@ -90,9 +96,9 @@ type = custom/script
 exec = checkupdates | wc -l
 interval = 1000
 label = Updates:%output%
-format-foreground = #24283b
+format-foreground = #26233A
 #format-underline = #FFFFD3
-format-background = #bb9af7
+format-background = #31748f
 format-prefix = " "
 format-padding = 1
 
@@ -100,7 +106,7 @@ format-padding = 1
 type = internal/xwindow
 label = %title:0:30:...%
 format = <label>
-format-foreground = #c0caf5
+format-foreground = #E0DEF4
 
 [module/spotify]
 type = custom/script
@@ -113,11 +119,11 @@ format-underline = #1db954
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-format-foreground = #24283b
-format-background = #9ece6a
+format-foreground = #26233A
+format-background = #9ccfd8
 
 format-prefix = " "
-format-prefix-foreground = #24283b
+format-prefix-foreground = #26233A
 #format-prefix-underline = #C7B5F4
 
 label-layout = %layout%
@@ -143,20 +149,20 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = ""
-label-focused-foreground = #c0caf5
-label-focused-background = #383A53
-label-focused-underline = #c0caf5
+label-focused-foreground = #E0DEF4
+label-focused-background = #6E6A86
+label-focused-underline = #E0DEF4
 label-focused-padding = 2
 
 label-occupied = ""
 label-occupied-padding = 2
-label-occupied-foreground = #c0caf5
+label-occupied-foreground = #E0DEF4
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = ""
-label-empty-foreground = #c0caf5
+label-empty-foreground = #E0DEF4
 label-empty-padding = 2
 
 ; Separator in between workspaces
@@ -259,8 +265,8 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-background = #e0af68
-format-foreground = #24283b
+format-background = #f6c177
+format-foreground = #26233A
 format-padding = 1
 format-prefix = " "
 #format-prefix-foreground = #24283b
@@ -309,7 +315,7 @@ format-disconnected =
 [module/date]
 type = internal/date
 interval = 1
-format-foreground = #24283b
+format-foreground = #26233A
 
 date =
 date-alt = " %Y-%m-%d"
@@ -317,10 +323,10 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix =  
-format-prefix-foreground = #24283b
+format-prefix = 
+format-prefix-foreground = #26233A
 #format-underline = #F2C3F7
-format-background = #7dcfff
+format-background = #c4a7e7
 format-padding = 1
 
 label = %date% %time%
@@ -330,13 +336,13 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 label-volume =  %percentage%%
-label-volume-foreground = #24283b
-label-volume-background = #f7768e
+label-volume-foreground = #26233A
+label-volume-background = #eb6f92
 label-volume-padding = 1
 
 label-muted =  Muted
-label-muted-foreground = #24283b
-label-muted-background = #f7768e
+label-muted-foreground = #26233A
+label-muted-background = #eb6f92
 
 label-muted-padding = 1
 
@@ -451,21 +457,21 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = #24283b
+label-open-foreground = #26233A
 #label-open-underline = ${colors.secondary}
 label-close =  Cancel
-label-close-foreground = #e0af68 
+label-close-foreground = #f6c177
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
-label-open-background = #c0caf5
+label-open-background = #e0def4
 label-open-padding = 1
 
 menu-0-0 = Reboot
 menu-0-0-exec = systemctl reboot
-menu-0-1 = Power Off 
+menu-0-1 = Power Off
 menu-0-1-exec = systemctl poweroff
-menu-0-1-foreground = #f7768e
-menu-0-0-foreground = #9ece6a
+menu-0-1-foreground = #eb6f92
+menu-0-0-foreground = #9ccfd8
 
 
 [settings]
@@ -481,4 +487,3 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
-
