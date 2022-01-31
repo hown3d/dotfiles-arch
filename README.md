@@ -1,2 +1,9 @@
-# dotfiles
-My dotfiles for BSPWM, SXHKD, polybar, picom and kitty. 
+# Dotfiles hown3d
+
+## Installation
+
+`$ ./stow.sh create`
+
+## Uninstall
+
+`$ ./stow.sh clean`
